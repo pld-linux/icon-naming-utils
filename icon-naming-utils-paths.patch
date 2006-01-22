@@ -1,0 +1,38 @@
+diff -aurN icon-naming-utils-0.6.6.orig/Makefile.am icon-naming-utils-0.6.6/Makefile.am
+--- icon-naming-utils-0.6.6.orig/Makefile.am	2006-01-20 18:24:15.000000000 +0100
++++ icon-naming-utils-0.6.6/Makefile.am	2006-01-22 22:35:38.417051000 +0100
+@@ -1,5 +1,5 @@
+ 
+-libexec_SCRIPTS = icon-name-mapping
++bin_SCRIPTS = icon-name-mapping
+ 
+ %: %.pl.in
+ 	sed -e "s#\@PERL\@#$(PERL)#g"		\
+@@ -7,22 +7,20 @@
+ 	< $< > $@
+ 
+ pkgconfig_in_files = icon-naming-utils.pc.in
+-pkgconfigdir = $(datadir)/pkgconfig
++pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = $(pkgconfig_in_files:.pc.in=.pc)
+ 
+-dtddir = $(datadir)/dtds
+-dtd_DATA = legacy-icon-mapping.dtd
+-
+-pkgdata_DATA = legacy-icon-mapping.xml
++pkgdata_DATA =				\
++	legacy-icon-mapping.xml		\
++	legacy-icon-mapping.dtd
+ 
+ EXTRA_DIST =				\
+ 	icon-name-mapping.pl.in		\
+ 	$(pkgconfig_in_files)		\
+-	$(dtd_DATA)			\
+ 	$(pkgdata_DATA)
+ 
+ CLEANFILES =				\
+-	$(libexec_SCRIPTS)
++	$(bin_SCRIPTS)
+ 
+ DISTCLEANFILES =			\
+ 	$(pkgconfig_DATA)
