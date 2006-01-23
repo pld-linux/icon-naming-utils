@@ -23,9 +23,8 @@ This utility maps the icon names used by the GNOME and KDE desktops to
 the icon names proposed in the Icon Naming Specification.
 
 %description -l pl
-Narzêdzie to adaptuje nazwy ikon u¿ywancyh przez ¶rodowiska GNOME i
-KDE do nazw zaproponowanych w stadarcie Icon Naming Specification.
-
+Narzêdzie to adaptuje nazwy ikon u¿ywanych przez ¶rodowiska GNOME i
+KDE do nazw zaproponowanych w standardzie Icon Naming Specification.
 
 %prep
 %setup -q
