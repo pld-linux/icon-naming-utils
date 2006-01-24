@@ -14,7 +14,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	perl-XML-Simple
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	pkgconfig
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
