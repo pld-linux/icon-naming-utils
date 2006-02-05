@@ -2,12 +2,12 @@
 Summary:	Icon naming utility
 Summary(pl):	Narzêdzie do nadawania nazw ikonom
 Name:		icon-naming-utils
-Version:	0.6.6
+Version:	0.6.7
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://tango-project.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	70e20fc78317c530e4fca1a6cb42d1a7
+# Source0-md5:	46443ee6ac3ee85b1a72b2abc55a770a
 Patch0:		%{name}-paths.patch
 URL:		http://tango-project.org/Standard_Icon_Naming_Specification
 BuildRequires:	autoconf
