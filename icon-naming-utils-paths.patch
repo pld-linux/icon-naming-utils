@@ -8,12 +8,8 @@ diff -aurN icon-naming-utils-0.6.6.orig/Makefile.am icon-naming-utils-0.6.6/Make
  
  %: %.pl.in
  	sed -e "s#\@PERL\@#$(PERL)#g"		\
-@@ -7,22 +7,20 @@
- 	< $< > $@
- 
- pkgconfig_in_files = icon-naming-utils.pc.in
--pkgconfigdir = $(datadir)/pkgconfig
-+pkgconfigdir = $(libdir)/pkgconfig
+@@ -10,19 +10,17 @@
+ pkgconfigdir = $(datadir)/pkgconfig
  pkgconfig_DATA = $(pkgconfig_in_files:.pc.in=.pc)
  
 -dtddir = $(datadir)/dtds
