@@ -17,6 +17,9 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# noarch
+%define		_pkgconfigdir	%{_datadir}/pkgconfig
+
 %description
 This utility maps the icon names used by the GNOME and KDE desktops to
 the icon names proposed in the Icon Naming Specification.
