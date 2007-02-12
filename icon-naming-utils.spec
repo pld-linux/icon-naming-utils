@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Icon naming utility
-Summary(pl):	Narzêdzie do nadawania nazw ikonom
+Summary(pl.UTF-8):   NarzÄ™dzie do nadawania nazw ikonom
 Name:		icon-naming-utils
 Version:	0.8.1
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This utility maps the icon names used by the GNOME and KDE desktops to
 the icon names proposed in the Icon Naming Specification.
 
-%description -l pl
-Narzêdzie to adaptuje nazwy ikon u¿ywanych przez ¶rodowiska GNOME i
+%description -l pl.UTF-8
+NarzÄ™dzie to adaptuje nazwy ikon uÅ¼ywanych przez Å›rodowiska GNOME i
 KDE do nazw zaproponowanych w standardzie Icon Naming Specification.
 
 %prep
