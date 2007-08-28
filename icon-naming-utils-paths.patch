@@ -1,6 +1,17 @@
-diff -aurN icon-naming-utils-0.6.6.orig/Makefile.am icon-naming-utils-0.6.6/Makefile.am
---- icon-naming-utils-0.6.6.orig/Makefile.am	2006-01-20 18:24:15.000000000 +0100
-+++ icon-naming-utils-0.6.6/Makefile.am	2006-01-22 22:35:38.417051000 +0100
+diff -urN icon-naming-utils-0.8.6/icon-naming-utils.pc.in icon-naming-utils-0.8.6.new/icon-naming-utils.pc.in
+--- icon-naming-utils-0.8.6/icon-naming-utils.pc.in	2007-02-16 05:07:45.000000000 +0100
++++ icon-naming-utils-0.8.6.new/icon-naming-utils.pc.in	2007-08-28 09:28:21.000000000 +0200
+@@ -1,6 +1,6 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-program_path=@libexecdir@
++program_path=@bindir@
+ 
+ Name: icon-naming-utils
+ Description: Utilities for mapping legacy GNOME and KDE icon names to the new Icon Naming Specification
+diff -urN icon-naming-utils-0.8.6/Makefile.am icon-naming-utils-0.8.6.new/Makefile.am
+--- icon-naming-utils-0.8.6/Makefile.am	2007-08-18 14:24:06.000000000 +0200
++++ icon-naming-utils-0.8.6.new/Makefile.am	2007-08-28 09:27:57.000000000 +0200
 @@ -1,5 +1,5 @@
  
 -libexec_SCRIPTS = icon-name-mapping
@@ -8,7 +19,7 @@ diff -aurN icon-naming-utils-0.6.6.orig/Makefile.am icon-naming-utils-0.6.6/Make
  
  %: %.pl.in
  	sed -e "s#\@PERL\@#$(PERL)#g"		\
-@@ -10,19 +10,17 @@
+@@ -11,20 +11,18 @@
  pkgconfigdir = $(datadir)/pkgconfig
  pkgconfig_DATA = $(pkgconfig_in_files:.pc.in=.pc)
  
@@ -24,22 +35,12 @@ diff -aurN icon-naming-utils-0.6.6.orig/Makefile.am icon-naming-utils-0.6.6/Make
  	icon-name-mapping.pl.in		\
  	$(pkgconfig_in_files)		\
 -	$(dtd_DATA)			\
- 	$(pkgdata_DATA)
+ 	$(pkgdata_DATA)			\
+ 	icon-naming-utils-uninstalled.pc.in
  
  CLEANFILES =				\
 -	$(libexec_SCRIPTS)
 +	$(bin_SCRIPTS)
  
  DISTCLEANFILES =			\
- 	$(pkgconfig_DATA)
-diff -aurN icon-naming-utils-0.6.6.orig/icon-naming-utils.pc.in icon-naming-utils-0.6.6/icon-naming-utils.pc.in
---- icon-naming-utils-0.6.6.orig/icon-naming-utils.pc.in	2006-01-20 18:26:56.000000000 +0100
-+++ icon-naming-utils-0.6.6/icon-naming-utils.pc.in	2006-01-22 22:48:31.807051000 +0100
-@@ -1,6 +1,6 @@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
--program_path=@libexecdir@
-+program_path=@bindir@
- 
- Name: icon-naming-utils
- Description: Utilities for mapping legacy GNOME and KDE icon names to the new Icon Naming Specification
+ 	$(pkgconfig_DATA)		\
