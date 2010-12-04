@@ -2,12 +2,12 @@
 Summary:	Icon naming utility
 Summary(pl.UTF-8):	Narzędzie do nadawania nazw ikonom
 Name:		icon-naming-utils
-Version:	0.8.7
+Version:	0.8.90
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://tango.freedesktop.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	2bcd77b8b6361831a932a5e76e82b66d
+# Source0-md5:	dd8108b56130b9eedc4042df634efa66
 Patch0:		%{name}-paths.patch
 URL:		http://tango.freedesktop.org/Standard_Icon_Naming_Specification
 BuildRequires:	autoconf
