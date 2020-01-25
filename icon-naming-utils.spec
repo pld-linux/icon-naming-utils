@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Icon naming utility
 Summary(pl.UTF-8):	Narzędzie do nadawania nazw ikonom
 Name:		icon-naming-utils
